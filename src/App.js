@@ -12,6 +12,13 @@ function App() {
 	return (
 		<div className="container">
 			<h2>React Previewer Markdown</h2>
+			<a
+				href={`https://guides.github.com/features/mastering-markdown/`}
+				target="_blank"
+				rel="noreferrer"
+			>
+				Comment marche le markdown ?
+			</a>
 			<div className="wrapper--preview">
 				<div className="md-translate">
 					<textarea
