@@ -9,6 +9,10 @@ function App() {
 		setState(e.target.value);
 	};
 
+	const handleReset = () => {
+		setState("");
+	};
+
 	return (
 		<div className="container">
 			<h2>React Previewer Markdown</h2>
@@ -26,6 +30,9 @@ function App() {
 						placeholder="Ecrivez en markdown"
 						onChange={handleChange}
 					></textarea>
+					<button className="md-reset" onClick={handleReset}>
+						Reset
+					</button>
 				</div>
 				<Preview state={state} />
 			</div>
