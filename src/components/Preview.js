@@ -1,7 +1,5 @@
-export const Preview = (props) => {
-    return (
-        <div className="preview">
-            {props}
-        </div>
-    )
-}
+const Preview = (props) => {
+	return <div className="md-previewer">Preview</div>;
+};
+
+export default Preview;
