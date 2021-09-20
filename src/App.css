@@ -53,6 +53,8 @@ h2 {
     height: 60vh;
     outline: none;
     padding: 1em;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .md-previewer {
