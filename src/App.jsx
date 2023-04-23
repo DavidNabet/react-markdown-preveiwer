@@ -1,6 +1,8 @@
-import { useState } from "react";
-import "./App.css";
-import Preview from "./components/Preview";
+import React from 'react';
+import { useState, Suspense, lazy } from 'react'
+import './App.css'
+
+const Preview = lazy(() => import('./components/Preview'))
 
 function App() {
 	const [state, setState] = useState("");
@@ -12,8 +14,7 @@ function App() {
 	const handleReset = () => {
 		setState("");
 	};
-
-	return (
+  return (
 		<div className="container">
 			<h2>React Previewer Markdown</h2>
 			<a
@@ -34,10 +35,12 @@ function App() {
 						Reset
 					</button>
 				</div>
-				<Preview state={state} />
+				<Suspense fallback={<div>loading...</div>}>
+					<Preview state={state} />
+				</Suspense>
 			</div>
 		</div>
-	);
+  )
 }
 
-export default App;
+export default App

@@ -7,6 +7,7 @@
     --b-black: #333;
     --gray: #eee;
     --blue: deepskyblue;
+    color-scheme: light dark;
 }
 
 body {
@@ -86,4 +87,16 @@ a {
     height: 55vh;
     padding: 1em;
     background-color: var(--gray);
+    color: var(--b-black);
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color: rgba(255, 255, 255, 0.87);
+      background-color: #242424;
+    }
+    .md-previewer {
+        background-color: var(--b-black);
+        color: #fff;
+    }
+  }
