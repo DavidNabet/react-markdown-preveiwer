@@ -1,7 +1,8 @@
 import React from 'react';
-import { useState, Suspense } from 'react'
+import { useState, Suspense, lazy } from 'react'
 import './App.css'
-import Preview from "./components/Preview";
+
+const Preview = lazy(() => import('./components/Preview'))
 
 function App() {
 	const [state, setState] = useState("");
