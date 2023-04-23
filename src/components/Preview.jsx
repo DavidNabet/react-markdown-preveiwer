@@ -1,6 +1,8 @@
-import marked from "marked";
+import React from "react";
+import {marked} from "marked";
 
-const Preview = ({ state }) => {
+function Preview({ state }) {
+
 	return (
 		<div
 			className="md-previewer"
@@ -9,4 +11,4 @@ const Preview = ({ state }) => {
 	);
 };
 
-export default Preview;
+export {Preview as default}
